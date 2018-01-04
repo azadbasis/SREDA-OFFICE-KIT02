@@ -5,372 +5,346 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+
     <LinearLayout
-        android:id="@+id/layoutTop"
+
+        android:id="@+id/logoLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_alignBottom="@+id/horizontalScrollView">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo" />
+
+        <TextClock
+            android:id="@+id/textClock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="NewApi" />
+    </LinearLayout>
+    <HorizontalScrollView
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:background="@color/light_green"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:layout_toEndOf="@+id/logoLayout"
+        android:id="@+id/horizontalScrollView">
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:id="@+id/layoutTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_weight="1"
 
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:clickable="true"
-                android:scaleType="fitXY"
-                android:src="@drawable/logo" />
 
-            <TextClock
-                android:id="@+id/textClock"
+
+            <Button
+                android:id="@+id/tvHome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:ignore="NewApi" />
+                android:gravity="center"
+                android:text="HOME"
+                android:background="@color/brown"
+                android:onClick="openOSApplication"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"/>
+
+
+            <Button
+                android:id="@+id/tvProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="PROFILE"
+                android:textColor="#FFFFFF"
+                android:onClick="openOSApplication"
+                android:background="@color/brown"
+                android:textStyle="bold" />
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="SEETINGS"
+                android:textColor="#FFFFFF"
+                android:background="@color/brown"
+                android:onClick="openOSApplication"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:id="@+id/tvLoginLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="openOSApplication"
+                android:text="Login And Logout"
+                android:background="@color/brown"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"/>
+
+
         </LinearLayout>
+    </HorizontalScrollView>
 
-
-        <View
-            android:layout_width="2dp"
-            android:layout_height="match_parent"
-            android:background="@color/blue_grey" />
-
-        <TextView
-            android:id="@+id/tvProfile"
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:clickable="true"
-            android:gravity="center"
-            android:onClick="openOSApplication"
-            android:text="PROFILE"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold" />
-
-        <View
-            android:layout_width="2dp"
-            android:layout_height="match_parent"
-            android:background="@color/blue_grey" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:clickable="true"
-            android:gravity="center"
-            android:text="SEETINGS"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold" />
-
-        <View
-            android:layout_width="2dp"
-            android:layout_height="match_parent"
-            android:background="@color/blue_grey" />
-
-        <TextView
-            android:id="@+id/tvLoginLogout"
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:clickable="true"
-            android:gravity="center"
-            android:onClick="openOSApplication"
-            android:text="LOGIN/OUT"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold" />
-
-        <View
-            android:layout_width="2dp"
-            android:layout_height="match_parent"
-            android:background="@color/blue_grey" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:clickable="true"
-            android:gravity="center"
-            android:text="INDENT"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
+    <CalendarView
+        android:id="@+id/calendarView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/layoutBelow"
-        android:layout_below="@+id/layoutTop">
+            android:background="@color/teal"
+        android:layout_weight="3"
+        android:layout_below="@+id/logoLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/featureLayout"/>
 
 
-        <CalendarView
-            android:id="@+id/calendarView"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="3" />
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/light_green"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <View
+        <HorizontalScrollView
+            android:id="@+id/featureLayout"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/layoutBelow"
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/blue_grey" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:clickable="true"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="CAR"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/blue_grey" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:clickable="true"
-                android:gravity="center"
-                android:text="MEETING ROOM"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/blue_grey" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:clickable="true"
-                android:gravity="center"
-                android:text="MEETING NOTICE"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/blue_grey" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:clickable="true"
-                android:gravity="center"
-                android:text="MEETING MINUTES"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/blue_grey" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:clickable="true"
-                android:gravity="center"
-                android:text="LEAVE"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/blue_grey" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:clickable="true"
-                android:gravity="center"
-                android:text="VISIT"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/blue_grey" />
-
-            <TextView
-                android:id="@+id/tvInbox"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:clickable="true"
-                android:gravity="center"
-                android:text="INBOX"
-                android:onClick="openOSApplication"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/blue_grey" />
-
-            <TextView
-                android:id="@+id/tvMail"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:clickable="true"
-                android:gravity="center"
-                android:onClick="openOSApplication"
-                android:text="MAIL"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/blue_grey" />
-
-        </LinearLayout>
+                android:orientation="horizontal">
 
 
-    </LinearLayout>
+
+                <Button
+                    android:id="@+id/tvCall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="openOSApplication"
+                    android:text="CALL"
+                    android:padding="5dp"
+                    android:background="@color/brown"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"/>
+
+                <Button
+                    android:id="@+id/tvChat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="CHAT"
+                    android:onClick="openOSApplication"
+                    android:background="@color/brown"
+                    android:padding="5dp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
 
 
-    <LinearLayout
-        android:id="@+id/layoutBelow"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@color/light_green"
-        android:gravity="center"
-        android:orientation="horizontal">
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"/>
 
-        <View
-            android:layout_width="2dp"
-            android:layout_height="match_parent"
-            android:background="@color/blue_grey" />
 
-        <TextView
-            android:id="@+id/tvCall"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:clickable="true"
-            android:gravity="center"
-            android:onClick="openOSApplication"
-            android:text="CALL"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold" />
+                <Button
+                    android:id="@+id/tvSMS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="SMS"
+                    android:background="@color/brown"
+                    android:onClick="openOSApplication"
+                    android:textColor="#FFFFFF"
+                    android:padding="5dp"
+                    android:textStyle="bold" />
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"/>
 
-        <View
-            android:layout_width="2dp"
-            android:layout_height="match_parent"
-            android:background="@color/blue_grey" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="openOSApplication"
+                    android:gravity="center"
+                    android:text="MEETING ROOM"
+                    android:padding="5dp"
+                    android:textColor="#FFFFFF"
+                    android:background="@color/brown"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tvChat"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:clickable="true"
-            android:gravity="center"
-            android:text="CHAT"
-            android:onClick="openOSApplication"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold" />
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:onClick="openOSApplication"
+                    android:text="MEETING NOTICE"
+                    android:textColor="#FFFFFF"
+                    android:background="@color/brown"
+                    android:textStyle="bold" />
 
-        <View
-            android:layout_width="2dp"
-            android:layout_height="match_parent"
-            android:background="@color/blue_grey" />
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="MEETING MINUTES"
+                    android:onClick="openOSApplication"
+                    android:textColor="#FFFFFF"
+                    android:background="@color/brown"
+                    android:textStyle="bold" />
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"/>
 
-        <TextView
-            android:id="@+id/tvHome"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:clickable="true"
-            android:gravity="center"
-            android:text="HOME"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold" />
 
-        <View
-            android:layout_width="2dp"
-            android:layout_height="match_parent"
-            android:background="@color/blue_grey" />
+                <Button
+                    android:id="@+id/tvLeave"
+                    android:onClick="openOSApplication"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="LEAVE"
+                    android:background="@color/brown"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tvSMS"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:clickable="true"
-            android:gravity="center"
-            android:text="SMS"
-            android:onClick="openOSApplication"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold" />
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"/>
 
-        <View
-            android:layout_width="2dp"
-            android:layout_height="match_parent"
-            android:background="@color/blue_grey" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="VISIT"
+                    android:padding="5dp"
+                    android:onClick="openOSApplication"
+                    android:background="@color/brown"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tvCamera"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:clickable="true"
-            android:onClick="openOSApplication"
-            android:gravity="center"
-            android:text="CAMERA/SCAN"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold" />
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"/>
+                <Button
+                    android:id="@+id/tvInbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="INBOX"
+                    android:padding="5dp"
+                    android:background="@color/brown"
+                    android:onClick="openOSApplication"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"/>
 
-    </LinearLayout>
+                <Button
+                    android:id="@+id/tvMail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:background="@color/brown"
+                    android:onClick="openOSApplication"
+                    android:text="MAIL"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"/>
+                <Button
+                    android:id="@+id/tvCamera"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="openOSApplication"
+                    android:gravity="center"
+                    android:text="CAMERA/SCAN"
+                    android:padding="5dp"
+                    android:background="@color/brown"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="INDENT"
+                    android:padding="5dp"
+                    android:onClick="openOSApplication"
+                    android:background="@color/brown"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"/>
+
+
+                <Button
+                    android:id="@+id/tvCar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="openOSApplication"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:background="@color/brown"
+                    android:text="CAR"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+
 
 </RelativeLayout>

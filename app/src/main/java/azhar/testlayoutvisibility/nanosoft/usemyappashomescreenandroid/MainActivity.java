@@ -1,5 +1,6 @@
 package azhar.testlayoutvisibility.nanosoft.usemyappashomescreenandroid;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
@@ -10,14 +11,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
 
+import azhar.testlayoutvisibility.nanosoft.usemyappashomescreenandroid.customfonts.LeaveActivity;
+
 public class MainActivity extends AppCompatActivity {
 
+    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test_demo);
-        setTitle("");
+        context = MainActivity.this;
 
     }
 
@@ -81,7 +85,13 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
         if (id == R.id.tvChat) {
-
+            setContentView(R.layout.activity_meeting_notice);
+        }
+        if (id == R.id.tvLeave) {
+            startActivity(new Intent(context, LeaveActivity.class));
+        }
+        if (id == R.id.tvCar) {
+            startActivity(new Intent(MainActivity.this, CarActivity.class));
         }
         if (id == R.id.tvSMS) {
             Uri sms_uri = Uri.parse("smsto:");
