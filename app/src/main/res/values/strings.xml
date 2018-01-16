@@ -21,7 +21,6 @@ Power Division</b>\n <u>Car Requisition Form(govt./personal purpose)</u></string
     <string name="hint_city">City</string>
 
 
-
     <!--notice-->
 
     <string name="action_menu">Menu</string>
@@ -398,10 +397,19 @@ Power Division</b>\n <u>Car Requisition Form(govt./personal purpose)</u></string
     <string name="message_sending_verification_code">Sending Verification Code...</string>
     <string name="title_mobile_verification">Mobile Verification</string>
     <string name="message_invalid_verification_code">Invalid Verification Code. Please Try Again!</string>
-    <string name="label_meeting_notice">Meeting Notice -</string>
+    <string name="label_meeting_notice">Meeting Notice</string>
     <string name="label_meeting_date">January 4,2018</string>
-    <string name="hint_meeting_address_1">Cha-88/1/B, Progoti Sharani, Uttar Badda, Dhaka 1212</string>
+    <string name="hint_meeting_address_1">Address</string>
     <string name="label_meeting_date_time">Sunday, January 4, 2018 2.30 pm</string>
+    <string name="btn_subject">Subject</string>
+    <string name="hint_meeting_subject">Meeting Subject</string>
+    <string name="label_chaired">Chaired By</string>
+    <string name="hint_chaired">Chaired By</string>
+    <string name="hint_meeting_chaired_by">Meeting Chaired By</string>
+    <string name="label_discusion">Decision</string>
+    <string name="hint_description">Description</string>
+    <string name="hint_decision">Decision</string>
+    <string name="hint_discussion">Discussion</string>
 
     <string-array name="country_codes">
         <item>+1</item>
@@ -418,6 +426,10 @@ Power Division</b>\n <u>Car Requisition Form(govt./personal purpose)</u></string
         <item>+7</item>
 
     </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_meeting_minute">Meeting Minute</string>
 
     <!--notice-->
 </resources>

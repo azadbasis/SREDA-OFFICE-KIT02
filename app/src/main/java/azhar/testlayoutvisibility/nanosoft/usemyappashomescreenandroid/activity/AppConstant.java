@@ -1,4 +1,4 @@
-package azhar.testlayoutvisibility.nanosoft.usemyappashomescreenandroid;
+package azhar.testlayoutvisibility.nanosoft.usemyappashomescreenandroid.activity;
 
 
 /**

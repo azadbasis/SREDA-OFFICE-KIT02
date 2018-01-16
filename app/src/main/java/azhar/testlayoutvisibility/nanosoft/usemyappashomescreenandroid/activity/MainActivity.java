@@ -1,4 +1,4 @@
-package azhar.testlayoutvisibility.nanosoft.usemyappashomescreenandroid;
+package azhar.testlayoutvisibility.nanosoft.usemyappashomescreenandroid.activity;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -10,12 +10,15 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.ArrayAdapter;
 
-import azhar.testlayoutvisibility.nanosoft.usemyappashomescreenandroid.customfonts.LeaveActivity;
+import azhar.testlayoutvisibility.nanosoft.usemyappashomescreenandroid.R;
 
 public class MainActivity extends AppCompatActivity {
 
     Context context;
+    String[] mobileArray = {"Android", "IPhone", "WindowsMobile", "Blackberry",
+            "WebOS", "Ubuntu", "Windows7", "Max OS X"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,10 +88,17 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
         if (id == R.id.tvChat) {
-            setContentView(R.layout.activity_meeting_notice);
+        //    setContentView(R.layout.meeting_notice_fragment);
+
+//            setContentView(R.layout.meeting_notice01);
+            ArrayAdapter adapter = new ArrayAdapter<String>(this,
+                    android.R.layout.simple_list_item_checked, mobileArray);
+
+            // listView.setAdapter(adapter);
         }
         if (id == R.id.tvLeave) {
-            startActivity(new Intent(context, LeaveActivity.class));
+            //   startActivity(new Intent(context, LeaveActivity.class));
+            setContentView(R.layout.item_raw_offecial);
         }
         if (id == R.id.tvCar) {
             startActivity(new Intent(MainActivity.this, CarActivity.class));
@@ -118,6 +128,16 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this, ProfileActivity.class));
 
         }
+        if (id == R.id.tvHome) {
+            setContentView(R.layout.header_text_input_layout);
+        }
+        if (id == R.id.tvMeetingNotice) {
+            startActivity(new Intent(this,  MeetingNoticeActivity.class));
 
+        } if (id == R.id.tvMeetingMinutes) {
+          setContentView(R.layout.meeting_minute);
+
+        }
     }
+
 }

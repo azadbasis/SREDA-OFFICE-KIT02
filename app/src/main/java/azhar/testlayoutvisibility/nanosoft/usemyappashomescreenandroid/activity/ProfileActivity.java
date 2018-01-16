@@ -1,4 +1,4 @@
-package azhar.testlayoutvisibility.nanosoft.usemyappashomescreenandroid;
+package azhar.testlayoutvisibility.nanosoft.usemyappashomescreenandroid.activity;
 
 import android.Manifest;
 import android.annotation.TargetApi;
@@ -38,6 +38,8 @@ import java.io.OutputStream;
 import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.Date;
+
+import azhar.testlayoutvisibility.nanosoft.usemyappashomescreenandroid.R;
 
 public class ProfileActivity extends AppCompatActivity {
 

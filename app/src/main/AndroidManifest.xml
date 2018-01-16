@@ -16,7 +16,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,17 +24,18 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".HomeScreen">
+        <receiver android:name=".activity.HomeScreen">
             <intent-filter>
                 <action android:name="android.intent.action.USER_PRESENT" />
             </intent-filter>
         </receiver>
 
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".LogoutActivity" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".CarActivity" />
-        <activity android:name=".customfonts.LeaveActivity"></activity>
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.LogoutActivity" />
+        <activity android:name=".activity.ProfileActivity" />
+        <activity android:name=".activity.CarActivity" />
+        <activity android:name=".customfonts.LeaveActivity" />
+        <activity android:name=".activity.MeetingNoticeActivity"></activity>
     </application>
 
 </manifest>

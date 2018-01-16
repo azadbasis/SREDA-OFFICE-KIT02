@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="azhar.testlayoutvisibility.nanosoft.usemyappashomescreenandroid.CarActivity">
+    tools:context="azhar.testlayoutvisibility.nanosoft.usemyappashomescreenandroid.activity.CarActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

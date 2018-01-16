@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary">#efefef</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
@@ -39,7 +39,9 @@
     <color name="text_3">#777676</color>
     <color name="text_4">#5e5e5e</color>
     <color name="text_5">#3b3b3b</color>
-
+    <color name="endblue">#0bcce6</color>
+    <color name="graylight">#fafafa</color>
+    <color name="startblue">#09c6df</color>
     <!--color-->
 
     <color name="transparent">#00000000</color>

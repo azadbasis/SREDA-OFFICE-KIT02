@@ -107,6 +107,13 @@
 
         </LinearLayout>
     </HorizontalScrollView>
+    <LinearLayout
+        android:id="@+id/container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </LinearLayout>
 
     <CalendarView
         android:id="@+id/calendarView"
@@ -199,6 +206,7 @@
                     android:layout_width="2dp"
                     android:layout_height="match_parent"/>
                 <Button
+                    android:id="@+id/tvMeetingNotice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:clickable="true"
@@ -214,6 +222,7 @@
                     android:layout_width="2dp"
                     android:layout_height="match_parent"/>
                 <Button
+                    android:id="@+id/tvMeetingMinutes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:clickable="true"

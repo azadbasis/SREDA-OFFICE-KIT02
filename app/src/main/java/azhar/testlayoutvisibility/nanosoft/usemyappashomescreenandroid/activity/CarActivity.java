@@ -1,7 +1,9 @@
-package azhar.testlayoutvisibility.nanosoft.usemyappashomescreenandroid;
+package azhar.testlayoutvisibility.nanosoft.usemyappashomescreenandroid.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import azhar.testlayoutvisibility.nanosoft.usemyappashomescreenandroid.R;
 
 public class CarActivity extends AppCompatActivity {
 
