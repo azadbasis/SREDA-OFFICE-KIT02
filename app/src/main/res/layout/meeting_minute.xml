@@ -83,12 +83,12 @@
                             android:id="@+id/etMeetingDiscussion"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:backgroundTint="@color/black"
-                            android:drawableLeft="@drawable/ic_description_black_24dp"
                             android:drawablePadding="10dp"
                             android:hint="@string/hint_discussion"
+                            android:backgroundTint="@color/white"
                             android:inputType="textMultiLine|textAutoCorrect|textAutoComplete|textCapSentences|textCapWords"
-                            android:lines="3"
+                            android:gravity="top"
+                            android:lines="10"
                             android:textColor="#000000" />
 
                     </android.support.design.widget.TextInputLayout>
@@ -109,22 +109,29 @@
                             android:id="@+id/etMeetingDiscussio"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:backgroundTint="@color/black"
-                            android:drawableLeft="@drawable/ic_note_add_black_24dp"
+                            android:backgroundTint="@color/white"
                             android:drawablePadding="10dp"
                             android:hint="@string/hint_decision"
+                            android:gravity="top"
                             android:inputType="textMultiLine|textAutoCorrect|textAutoComplete|textCapSentences|textCapWords"
-                            android:lines="3"
+                            android:lines="10"
                             android:textColor="#000000" />
 
                     </android.support.design.widget.TextInputLayout>
                 </LinearLayout>
 
-
-
-
             </android.support.v7.widget.CardView>
-
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="#288cb1"
+                android:drawableLeft="@drawable/ic_people_black_24dp"
+                android:drawablePadding="@dimen/_5sdp"
+                android:padding="@dimen/_5sdp"
+                android:text="Send To"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recyclerViewOffecial"
                 android:layout_width="match_parent"
@@ -137,18 +144,6 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp">
                 <include layout="@layout/add_mail_id"/>
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:background="#288cb1"
-                    android:drawableLeft="@drawable/ic_people_black_24dp"
-                    android:drawablePadding="@dimen/_5sdp"
-                    android:padding="@dimen/_5sdp"
-                    android:text="Send To"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white" />
 
             </android.support.v7.widget.CardView>
 

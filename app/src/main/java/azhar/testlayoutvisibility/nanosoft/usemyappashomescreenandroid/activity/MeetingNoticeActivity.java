@@ -50,7 +50,7 @@ public class MeetingNoticeActivity extends AppCompatActivity {
     private ArrayList<String> mEntries;
     OffecialBeanAdapter offecialBeanAdapter;
     EditText etmYEmailID, etMeetingAddress, etChairedBy, etMeetingSubject, etMeetingDiscussion;
-    TextView tvMeetingDateTime;
+    TextView tvMeetingDateTime,tvMeetingSchedule;
     String date_time = "";
     int mYear, mMonth, mDay, mHour, mMinute;
     int cYear, cMonth, cDay, cHour, cMinute;
@@ -75,11 +75,13 @@ public class MeetingNoticeActivity extends AppCompatActivity {
         etMeetingSubject = (EditText) findViewById(R.id.etMeetingSubject);
         etMeetingDiscussion = (EditText) findViewById(R.id.etMeetingDiscussion);
         tvMeetingDateTime = (TextView) findViewById(R.id.tvMeetingDateTime);
+        tvMeetingSchedule = (TextView) findViewById(R.id.tvMeetingSchedule);
         DateFormat dateFormatter = new SimpleDateFormat("dd-M-yyyy hh:mm");
         dateFormatter.setLenient(false);
         Date today = new Date();
         dateTime = dateFormatter.format(today);
         tvMeetingDateTime.setText(dateTime);
+        tvMeetingSchedule.setText(dateTime);
 
 
     }
@@ -280,6 +282,7 @@ public class MeetingNoticeActivity extends AppCompatActivity {
                         dateTime = date_time + " " + hourOfDay + ":" + minute + " " + format;
 
                         tvMeetingDateTime.setText(dateTime);
+                        tvMeetingSchedule.setText(dateTime);
                     }
                 }, mHour, mMinute, false);
         timePickerDialog.show();

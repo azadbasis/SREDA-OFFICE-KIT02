@@ -399,13 +399,13 @@ Power Division</b>\n <u>Car Requisition Form(govt./personal purpose)</u></string
     <string name="message_invalid_verification_code">Invalid Verification Code. Please Try Again!</string>
     <string name="label_meeting_notice">Meeting Notice</string>
     <string name="label_meeting_date">January 4,2018</string>
-    <string name="hint_meeting_address_1">Address</string>
+    <string name="hint_meeting_address_1">Meeting Place :</string>
     <string name="label_meeting_date_time">Sunday, January 4, 2018 2.30 pm</string>
     <string name="btn_subject">Subject</string>
-    <string name="hint_meeting_subject">Meeting Subject</string>
-    <string name="label_chaired">Chaired By</string>
-    <string name="hint_chaired">Chaired By</string>
-    <string name="hint_meeting_chaired_by">Meeting Chaired By</string>
+    <string name="hint_meeting_subject">Meeting Subject :</string>
+    <string name="label_chaired">Meeting Chaired By :</string>
+    <string name="hint_chaired">Meeting Chaired By :</string>
+    <string name="hint_meeting_chaired_by">Meeting Chaired By :</string>
     <string name="label_discusion">Decision</string>
     <string name="hint_description">Description</string>
     <string name="hint_decision">Decision</string>
@@ -430,6 +430,8 @@ Power Division</b>\n <u>Car Requisition Form(govt./personal purpose)</u></string
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="label_meeting_minute">Meeting Minute</string>
+    <string name="hint_meeting_date_time">Meeting Date And Time :</string>
+    <string name="hint_signature">Signature</string>
 
     <!--notice-->
 </resources>
